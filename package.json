@@ -1,0 +1,15 @@
+{
+  "name": "dockgen",
+  "version": "0.2.2",
+  "description": "Autogen Dockerfile from package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dockgen": "bin/dockgen"
+  },
+  "repository": "https://github.com/sreuter/dockgen.git",
+  "author": "Sascha Reuter",
+  "license": "MIT"
+}
