@@ -6,7 +6,7 @@ Autogenerate Dockerfile from package.json
 
 Commandline-Mode:
 
-```$ dockgen # Looks for package.json in pwd```
+```$ dockgen # Looks for package.json in current directory```
 
 Lib-Mode:
 
