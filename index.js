@@ -34,6 +34,8 @@ module.exports = function(path) {
     'EXPOSE ' + opt.port,
     'ENV PORT ' + opt.port,
     'ADD ./ /var/service/',
+    'WORKDIR /var/service/',
+    'RUN cd /var/service/; npm install',
     'CMD ' + 'PORT=' + opt.port + ' ' + opt.command.start
   ];
 
