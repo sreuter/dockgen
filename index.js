@@ -25,17 +25,16 @@ module.exports = function(path) {
   var dockerfile = [
     'FROM ubuntu:precise',
     'MAINTAINER node-dockgen',
-    'RUN apt-get install -y python-software-properties python',
-    'RUN add-apt-repository ppa:chris-lea/node.js',
     'RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise universe" >> /etc/apt/sources.list',
+    'RUN add-apt-repository ppa:chris-lea/node.js',
     'RUN apt-get update',
-    'RUN apt-get install -y nodejs',
+    'RUN apt-get install -y python-software-properties python nodejs',
     'RUN mkdir /var/service',
     'EXPOSE ' + opt.port,
     'ENV PORT ' + opt.port,
     'ADD ./ /var/service/',
     'WORKDIR /var/service/',
-    'RUN cd /var/service/; npm install',
+    'RUN cd /var/service/; npm install --unsafe-perm',
     'CMD ' + 'PORT=' + opt.port + ' ' + opt.command.start
   ];
 
