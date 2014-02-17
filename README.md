@@ -11,6 +11,8 @@ Commandline-Mode:
 Lib-Mode:
 
 ```
-var dockgen = require('dockgen');
-dockgen(path_to_package.json);
+var dockgen = require('dockgen'),
+    dockerfile = dockgen(path_to_package.json);
+
+console.log(dockerfile);
 ```
