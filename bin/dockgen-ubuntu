@@ -1,0 +1,4 @@
+#!/usr/bin/env nodejs
+var dockgen = require('..');
+
+console.log(dockgen(process.cwd()));
