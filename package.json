@@ -1,6 +1,6 @@
 {
   "name": "dockgen",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "Autogen Dockerfile from package.json",
   "main": "index.js",
   "scripts": {
